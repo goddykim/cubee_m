@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CUBEE - 큐브 엔터테인먼트 온라인 공식 쇼핑몰 큐비</title>
+
+  <link rel="stylesheet" href="css/cubee_m.css" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <script src="lib/jquery-3.7.0.min.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <script>
+    $(function () {
+
+      $('header .inner .menu .menu_icon').click(function(){
+        $('.click').show()
+      })
+      $('.click .inner .top img:nth-child(2)').click(function(){
+        $('.click').hide()
+      })
+
+      $('.click .inner .bottom .menu_w .menu').click(function(){
+        $('.click .inner .bottom .menu_w .menu .sub').eq($(this).index()).stop().slideToggle()
+
+      })
+
+      var banner = new Swiper(".mySwiper.banner", {
+        slidesPerView: 3,
+        spaceBetween: 25,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 6000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var notice = new Swiper(".mySwiper.notice", {
+        slidesPerView: 1,
+        spaceBetween: 25,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var new_items = new Swiper(".mySwiper.new_items", {
+        slidesPerView: 2,
+        spaceBetween: 12,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      $('.celeb .inner .artist ul li').click(function () {
+        $('.celeb .inner .items').removeClass('on')
+        $('.celeb .inner .items').eq($(this).index()).addClass('on')
+        return false;
+      })
+
+      $('.celeb .inner .artist ul li').click(function () {
+        $('.celeb .inner .artist ul li').removeClass('on')
+        $('.celeb .inner .artist ul li').eq($(this).index()).addClass('on')
+      })
+
+      var new_album = new Swiper(".mySwiper.new_album", {
+        slidesPerView: 3,
+        spaceBetween: 12,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="inner">
+      <div class="menu">
+        <a href="#" class="menu_icon">
+          <img src="img/icons8-메뉴.png" alt="menu" />
+        </a>
+      </div>
+      <!-- .menu end -->
+
+      <a href="#" class="logo"> <img src="img/logo.gif" alt="logo" /> </a><!-- .logo end -->
+
+      <div class="icon">
+        <a href="#" class="search">
+          <img src="img/icons8-돋보기.png" alt="search" /> </a><!-- .search end -->
+        <a href="#" class="cart">
+          <img src="img/icons8-가방.png" alt="cart" /> </a><!-- .cart end -->
+      </div>
+      <!-- .icon end -->
+    </div>
+    <!-- .inner end -->
+  </header>
+
+  <section class="click">
+    <div class="inner">
+      <div class="top">
+        <img src="img/logo.gif" alt="logo" />
+        <img src="img/icons8-닫기-50.png" alt="close" />
+      </div>
+      <!-- .top end -->
+      <div class="bottom">
+        <ul class="menu_w">
+          <li class="menu">
+            <a href="#" class="main_m">
+              <h4>NOTICE</h4>
+              <img src="img/icons8-아래로-50.png" alt="down" class="down" />
+              <img src="img/icons8-위로-50.png" alt="up" class="up" />
+            </a><!-- .main_m end -->
+            <ul class="sub">
+              <li><a href="#">NOTICE</a></li>
+            </ul>
+            <!-- .sub end -->
+          </li>
+          <!-- .menu end -->
+          <li class="menu">
+            <a href="#" class="main_m">
+              <h4>ARTIST</h4>
+              <img src="img/icons8-아래로-50.png" alt="down" class="down" />
+              <img src="img/icons8-위로-50.png" alt="up" class="up" />
+            </a><!-- .main_m end -->
+            <ul class="sub">
+              <li><a href="#">BTOB</a></li>
+              <li><a href="#">PENTAGON</a></li>
+              <li><a href="#">(G)I-DLE</a></li>
+              <li><a href="#">LIGHTSUM</a></li>
+            </ul>
+            <!-- .sub end -->
+          </li>
+          <!-- .menu end -->
+          <li class="menu">
+            <a href="#" class="main_m">
+              <h4>MUSIC</h4>
+              <img src="img/icons8-아래로-50.png" alt="down" class="down" />
+              <img src="img/icons8-위로-50.png" alt="up" class="up" />
+            </a><!-- .main_m end -->
+            <ul class="sub">
+              <li><a href="#">ALBUM</a></li>
+              <li><a href="#">DVD</a></li>
+            </ul>
+            <!-- .sub end -->
+          </li>
+          <!-- .menu end -->
+          <li class="menu">
+            <a href="#" class="main_m">
+              <h4>OFFICIAL MD</h4>
+              <img src="img/icons8-아래로-50.png" alt="down" class="down" />
+              <img src="img/icons8-위로-50.png" alt="up" class="up" />
+            </a><!-- .main_m end -->
+            <ul class="sub">
+              <li><a href="#">BTOB</a></li>
+              <li><a href="#">PENTAGON</a></li>
+              <li><a href="#">(G)I-DLE</a></li>
+              <li><a href="#">LIGHTSUM</a></li>
+            </ul>
+            <!-- .sub end -->
+          </li>
+          <!-- .menu end -->
+        </ul>
+        <!-- .menu_w end -->
+      </div>
+      <!-- .bottom end -->
+    </div>
+    <!-- .inner end -->
+  </section>
+  <!-- .click end -->
+
+
+  <main>
+    <section class="main">
+      <div class="banner">
+        <!-- Swiper -->
+        <div class="swiper mySwiper banner">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide banner_i">
+              <a href="#">
+                <img src="img/BTOB_banner.jpg" alt="1" />
+                <p>자세히 보기</p>
+              </a>
+            </div>
+            <!-- .banner_i end -->
+            <div class="swiper-slide banner_i">
+              <a href="#">
+                <img src="img/LIGHTSUM_banner.jpg" alt="2" />
+                <p>자세히 보기</p>
+              </a>
+            </div>
+            <!-- .banner_i end -->
+            <div class="swiper-slide banner_i">
+              <a href="#">
+                <img src="img/IDLE_LIGHTSTICK_VER2.jpg" alt="3" />
+                <p>자세히 보기</p>
+              </a>
+            </div>
+            <!-- .banner_i end -->
+            <div class="swiper-slide banner_i">
+              <a href="#">
+                <img src="img/PENTAGON_PADO.jpg" alt="4" />
+                <p>자세히 보기</p>
+              </a>
+            </div>
+            <!-- .banner_i end -->
+            <div class="swiper-slide banner_i">
+              <a href="#">
+                <img src="img/PENTAGON_PADO.jpg" alt="5" />
+                <p>자세히 보기</p>
+              </a>
+            </div>
+            <!-- .banner_i end -->
+            <div class="swiper-slide banner_i">
+              <a href="#">
+                <img src="img/IDLE_LIGHTSTICK_VER2.jpg" alt="6" />
+                <p>자세히 보기</p>
+              </a>
+            </div>
+            <!-- .banner_i end -->
+          </div>
+          <!-- <div class="swiper-button-next"></div> -->
+          <!-- <div class="swiper-button-prev"></div> -->
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </div>
+      <!-- .banner end -->
+    </section>
+    <!-- .main end -->
+
+    <section class="notice">
+      <div class="inner">
+        <!-- Swiper -->
+        <div class="swiper mySwiper notice">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide notice">
+              <a href="#">
+                [NOTICE] 추석 연휴 배송 및 고객센터 휴무 안내
+              </a>
+            </div>
+            <!-- .notice end -->
+            <div class="swiper-slide notice">
+              <a href="#">
+                [NOTICE] (여자)아이들 공식 응원봉 파우치 Ver.2 예약 판매 안내
+              </a>
+            </div>
+            <!-- .notice end -->
+            <div class="swiper-slide notice">
+              <a href="#">
+                [NOTICE] 2023 설연휴 CS고객센터 및 물류센터 휴무 안내
+              </a>
+            </div>
+            <!-- .notice end -->
+            <div class="swiper-slide notice">
+              <a href="#">
+                [NOTICE] (여자)아이들 2023 SEASON'S GREETINGS 배송 지연 안내
+              </a>
+            </div>
+            <!-- .notice end -->
+          </div>
+        </div>
+      </div>
+      <!-- .inner end -->
+    </section>
+    <!-- .notice end -->
+
+    <section class="new_items">
+      <div class="inner">
+        <div class="txt">
+          <h3>New Items</h3>
+          <a href="#">
+            <img src="img/icons8-더하다.png" alt="plus" />
+          </a>
+        </div>
+        <!-- .txt end -->
+
+        <div class="items">
+          <!-- Swiper -->
+          <div class="swiper mySwiper new_items">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIM_1.jpg" alt="item" />
+                  <p>[DIVE INTO YOU] A4 POSTER & L HOLDER SET</p>
+                  <span>13,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIM_2.jpg" alt="item" />
+                  <p>[DIVE INTO YOU] PHOTOCARD SET</p>
+                  <span>7,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIM_3.jpg" alt="item" />
+                  <p>[DIVE INTO YOU] POSTCARD SET</p>
+                  <span>15,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIM_4.jpg" alt="item" />
+                  <p>[DIVE INTO YOU] BRACELET</p>
+                  <span>24,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIM_5.jpg" alt="item" />
+                  <p>[DIVE INTO YOU] PAPERWEIGHT</p>
+                  <span>20,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIM_6.jpg" alt="item" />
+                  <p>[DIVE INTO YOU] GLASS</p>
+                  <span>25,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIM_7.jpg" alt="item" />
+                  <p>[DIVE INTO YOU] KEYRING</p>
+                  <span>15,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIM_8.jpg" alt="item" />
+                  <p>[DIVE INTO YOU] T-SHIRT</p>
+                  <span>35,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIM_9.jpg" alt="item" />
+                  <p>[DIVE INTO YOU] GUITAR PICK & CASE SET</p>
+                  <span>25,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIGHTSUM_1.jpg" alt="item" />
+                  <p>[LIGHTSUM] 2nd Mini Album [Honey or Spice]</p>
+                  <span>18,600원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIGHTSUM_2.jpg" alt="item" />
+                  <p>[LIGHTSUM] 2nd Mini Album [Honey or Spice] Honey Ver. + Spice Ver.</p>
+                  <span>37,200원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/LIGHTSUM_3.jpg" alt="item" />
+                  <p>[LIGHTSUM] 2nd Mini Album [Honey or Spice] Honey Ver. + Spice Ver. (쇼케이스 응모)</p>
+                  <span>37,200원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/(G)I-DLE_1.jpg" alt="item" />
+                  <p>[(G)I-DLE] Special Album [HEAT] (DIGIPAK Ver.) (Member Ver.)</p>
+                  <span>14,900원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/(G)I-DLE_2.jpg" alt="item" />
+                  <p>[(G)I-DLE] Special Album [HEAT] (DIGIPAK Ver.) (Group Ver.)</p>
+                  <span>14,900원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/(G)I-DLE_3.jpg" alt="item" />
+                  <p>[(G)I-DLE] Special Album [HEAT] (SLEEVE Ver.) (BLAZE Ver.)</p>
+                  <span>19,300원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/(G)I-DLE_4.jpg" alt="item" />
+                  <p>[(G)I-DLE] Special Album [HEAT] (SLEEVE Ver.) (FLARE Ver.)</p>
+                  <span>19,300원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/BTOB_1.jpg" alt="item" />
+                  <p>[BTOB] BTOB 10TH ANNIVERSARY CONCERT 2022 BTOB TIME [Be Together] (Blu-ray)</p>
+                  <span>66,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+              <div class="swiper-slide item">
+                <a href="#">
+                  <img src="img/BTOB_2.jpg" alt="item" />
+                  <p>[BTOB] BTOB 10TH ANNIVERSARY CONCERT 2022 BTOB TIME [Be Together] (DVD)</p>
+                  <span>49,000원</span>
+                </a>
+              </div>
+              <!-- .item end -->
+
+            </div>
+          </div>
+        </div>
+        <!-- .items end -->
+      </div>
+      <!-- .inner end -->
+    </section>
+    <!-- .new_items end -->
+
+
+    <section class="celeb">
+      <div class="inner">
+        <h4>Celeb for You</h4>
+        <div class="artist">
+          <ul>
+            <li class="on"><a href="#" class="artist_n">
+                BTOB
+              </a></li>
+            <li><a href="#" class="artist_n">
+                PENTAGON
+              </a></li>
+            <li><a href="#" class="artist_n">
+                (G)I-DLE
+              </a></li>
+            <li><a href="#" class="artist_n">
+                LIGHTSUM
+              </a></li>
+          </ul>
+        </div><!-- .artist end -->
+
+        <div class="items on">
+          <div class="artist_n">
+            <a href="#">
+              <p>BTOB</p>
+              <span>바로가기</span>
+            </a>
+          </div><!-- .artist_n end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/BTOB_1.jpg" alt="1">
+              <p>[BTOB] BTOB 10TH ANNIVERSARY
+                CONCERT 2022 BTOB TIME
+                [Be Together] (Blu-ray)</p>
+              <span>66,000원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/BTOB_2.jpg" alt="2">
+              <p>[BTOB] BTOB 10TH ANNIVERSARY CONCERT 2022 BTOB TIME [Be Together] (DVD)</p>
+              <span>49,000원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/BTOB_3.jpg" alt="3">
+              <p>[BTOB] 12th Mini Album [WIND AND WISH] Album WIND Ver.</p>
+              <span>18,600원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/BTOB_4.jpg" alt="4">
+              <p>[BTOB] 12th Mini Album [WIND AND WISH] Album WISH Ver.</p>
+              <span>18,600원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/BTOB_5.jpg" alt="5">
+              <p>[BTOB] 12th Mini Album [WIND AND WISH] Album WIND+WISH Ver.</p>
+              <span>37,200원</span>
+            </a>
+          </div><!-- .item end -->
+        </div><!-- .items end -->
+
+        <div class="items">
+          <div class="artist_n">
+            <a href="#">
+              <p>PENTAGON</p>
+              <span>바로가기</span>
+            </a>
+          </div><!-- .artist_n end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/PENTAGON_1.jpg" alt="1">
+              <p>[PENTAGON] JAPAN 6th Mini Album [PADO] TYPE A</p>
+              <span>28,000원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/PENTAGON_2.jpg" alt="2">
+              <p>[PENTAGON] JAPAN 6th Mini Album [PADO] TYPE B</p>
+              <span>28,000원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/PENTAGON_3.jpg" alt="3">
+              <p>[PENTAGON] 공식 응원봉</p>
+              <span>30,000원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/PENTAGON_4.jpg" alt="4">
+              <p>[PENTAGON] 공식 슬로건 Ver.3</p>
+              <span>10,000원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/PENTAGON_5.jpg" alt="5">
+              <p>[PENTAGON] 공식 응원봉 파우치 Ver.2</p>
+              <span>30,000원</span>
+            </a>
+          </div><!-- .item end -->
+        </div><!-- .items end -->
+
+        <div class="items">
+          <div class="artist_n">
+            <a href="#">
+              <p>(G)I-DLE</p>
+              <span>바로가기</span>
+            </a>
+          </div><!-- .artist_n end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/(G)I-DLE_1.jpg" alt="1">
+              <p>[(G)I-DLE] Special Album [HEAT] (DIGIPAK Ver.) (Member Ver.)</p>
+              <span>14,900원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/(G)I-DLE_2.jpg" alt="2">
+              <p>[(G)I-DLE] Special Album [HEAT] (DIGIPAK Ver.) (Group Ver.)</p>
+              <span>14,900원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/(G)I-DLE_3.jpg" alt="3">
+              <p>[(G)I-DLE] Special Album [HEAT] (SLEEVE Ver.) (BLAZE Ver.)</p>
+              <span>19,300원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/(G)I-DLE_4.jpg" alt="4">
+              <p>[(G)I-DLE] Special Album [HEAT] (SLEEVE Ver.) (FLARE Ver.)</p>
+              <span>19,300원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/(G)I-DLE_5.jpg" alt="5">
+              <p>[(G)I-DLE] 공식 응원봉 Ver.2</p>
+              <span>39,000원</span>
+            </a>
+          </div><!-- .item end -->
+        </div><!-- .items end -->
+
+        <div class="items">
+          <div class="artist_n">
+            <a href="#">
+              <p>LIGHTSUM</p>
+              <span>바로가기</span>
+            </a>
+          </div><!-- .artist_n end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/LIGHTSUM_1.jpg" alt="1">
+              <p>[LIGHTSUM] 2nd Mini Album [Honey or Spice]</p>
+              <span>18,600원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/LIGHTSUM_2.jpg" alt="2">
+              <p>[LIGHTSUM] 2nd Mini Album [Honey or Spice] Honey Ver. + Spice Ver.</p>
+              <span>37,200원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/LIGHTSUM_3.jpg" alt="3">
+              <p>[LIGHTSUM] 2nd Mini Album [Honey or Spice] Honey Ver. + Spice Ver. (쇼케이스 응모)</p>
+              <span>37,200원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/LIGHTSUM_4.jpg" alt="4">
+              <p>[LIGHTSUM] 포토카드 세트</p>
+              <span>8,000원</span>
+            </a>
+          </div><!-- .item end -->
+          <div class="item">
+            <a href="#">
+              <img src="img/LIGHTSUM_5.jpg" alt="5">
+              <p>[LIGHTSUM] 소원팔찌</p>
+              <span>10,000원</span>
+            </a>
+          </div><!-- .item end -->
+        </div><!-- .items end -->
+      </div><!-- .inner end -->
+    </section><!-- .celeb end -->
+
+
+    <section class="banner_2">
+      <div class="inner">
+        <div class="stick">
+          <a href="#">
+            <img src="img/STICK.jpg" alt="stick">
+          </a>
+        </div><!-- .stick end -->
+        <div class="okvit">
+          <a href="#">
+            <img src="img/OKVIT.png" alt="okvit">
+          </a>
+          <a href="#">
+            <img src="img/CS_CENTER.jpg" alt="cs_center">
+          </a>
+        </div><!-- .okvit end -->
+      </div><!-- .inner end -->
+    </section><!-- .banner_2 end -->
+
+
+    <section class="new_album">
+      <div class="inner">
+        <h4>New Album</h4>
+        <!-- Swiper -->
+        <div class="swiper mySwiper new_album">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide album">
+              <a href="#">
+                <img src="img/PADO.webp" alt="1" />
+                <p>[PENTAGON]<br>
+                  JAPAN 6th Mini Album<br>
+                  [PADO]</p>
+              </a>
+            </div>
+            <!-- .album end -->
+            <div class="swiper-slide album">
+              <a href="#">
+                <img src="img/I DO.webp" alt="2" />
+                <p>[(G)I-DLE]<br>
+                  Digital Single Album<br>
+                  [I DO]</p>
+              </a>
+            </div>
+            <!-- .album end -->
+            <div class="swiper-slide album">
+              <a href="#">
+                <img src="img/I feel.webp" alt="3" />
+                <p>[(G)I-DLE]<br>
+                  6th Mini Album<br>
+                  [I feel]</p>
+              </a>
+            </div>
+            <!-- .album end -->
+            <div class="swiper-slide album">
+              <a href="#">
+                <img src="img/WIND AND WISH.webp" alt="4" />
+                <p>[BTOB]<br>
+                  12th Mini Album<br>
+                  [WIND AND WISH]</p>
+              </a>
+            </div>
+            <!-- .album end -->
+            <div class="swiper-slide album">
+              <a href="#">
+                <img src="img/I love.webp" alt="5" />
+                <p>[(G)I-DLE]<br>
+                  5th Mini Album<br>
+                  [I love]</p>
+              </a>
+            </div>
+            <!-- .album end -->
+            <div class="swiper-slide album">
+              <a href="#">
+                <img src="img/Feelin' Like.webp" alt="6" />
+                <p>[PENTAGON]<br>
+                  JAPAN 5th Mini Album<br>
+                  [Feelin' Like]</p>
+              </a>
+            </div>
+            <!-- .album end -->
+          </div>
+          <!-- <div class="swiper-button-next"></div> -->
+          <!-- <div class="swiper-button-prev"></div> -->
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </div><!-- .inner end -->
+    </section><!-- .new_album end -->
+  </main>
+
+  <footer>
+    <div class="inner">
+      <div class="txt">
+        <ul>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">상품입점문의</a></li>
+          <li><a href="#">제휴/광고문의</a></li>
+        </ul>
+      </div><!-- .txt end -->
+      <div class="txt txt_2">
+        <ul>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">사업자정보확인</a></li>
+        </ul>
+      </div><!-- .txt_2 end -->
+      <p>사업자등록번호 : 120-87-75811 | 통신판매업신고번호 : 제2017-와부조안-0031호<br>
+        | 대표이사 : 조성희 | 개인정보취급자 : 조성희</p>
+      <span>(주)코팬글로벌 ⓒ 2011 Cube Entertainment. All rights reserved.<br>
+        경기도 남양주시 와부읍 도심길 121-12Email ask@cubee.co.kr</span>
+    </div><!-- .inner end -->
+  </footer>
+</body>
+
+</html>
